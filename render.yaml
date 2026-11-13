@@ -1,0 +1,22 @@
+# Nova 2030: public demo with synthetic data ONLY.
+# The full Nova 2030 codebase remains in the private Nova repository.
+services:
+  - type: web
+    name: nova2030-ssh-demo
+    runtime: static
+    buildCommand: "mkdir -p dist/assets/brand dist/packages/mortgage-inventory && cp index.html app.js demo-data.js styles.css robots.txt dist/ && cp assets/brand/ssh-logo.png dist/assets/brand/ssh-logo.png && cp packages/mortgage-inventory/domain.js dist/packages/mortgage-inventory/domain.js"
+    staticPublishPath: ./dist
+    autoDeployTrigger: commit
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Referrer-Policy
+        value: no-referrer
+      - path: /*
+        name: Content-Security-Policy
+        value: "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'none'; font-src 'self'; form-action 'none'; frame-ancestors 'none'; base-uri 'none'"
