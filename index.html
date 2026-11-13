@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Nova Mortgage | Schee Scheuller</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>/* review 2026-11-13: foutmelding zonder window.alert, zichtbare focus, verborgen label */
+    .ui-message{margin:12px 0 0;padding:10px 14px;border-radius:10px;background:#fbeceb;color:#a64d42;font-weight:600}
+    .ui-message[hidden]{display:none}
+    .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+    :focus-visible{outline:3px solid #ffc107;outline-offset:2px}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <img class="ssh-logo" src="./assets/brand/ssh-logo.png" alt="Schee Scheuller Hypotheken">
+        <div class="brand-tagline">NOVA 2030</div>
+      </div>
+      <div class="sidebar-caption">NOVA OFFICE <span>2030</span></div>
+      <nav class="side-nav" aria-label="Hoofdnavigatie">
+        <a href="#dashboard" class="nav-link" data-nav="dashboard"><span class="nav-icon">▦</span> Overzicht</a>
+        <a href="#inventarisatie" class="nav-link active" data-nav="inventarisatie"><span class="nav-icon">⌂</span> Mortgage Inventarisatie</a>
+        <a href="#documenten" class="nav-link" data-nav="documenten"><span class="nav-icon">▤</span> Documenten</a>
+        <a href="#signaleringen" class="nav-link" data-nav="signaleringen"><span class="nav-icon">◇</span> Signaleringen</a>
+        <a href="#goedkeuringen" class="nav-link" data-nav="goedkeuringen"><span class="nav-icon">✓</span> Goedkeuringen</a>
+        <a href="#proces" class="nav-link" data-nav="proces"><span class="nav-icon">◷</span> Procesverloop</a>
+      </nav>
+      <div class="sidebar-grow"></div>
+      <div class="system-tile"><span class="system-dot"></span><div><strong>eBlinqx niet gekoppeld</strong><small>Alleen demonstratie · geen writes</small></div></div>
+      <div class="sidebar-user"><div class="avatar">AD</div><div><strong>Hypotheekadviseur</strong><small>Demonstratieomgeving</small></div></div>
+    </aside>
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Nova Core</span><span class="crumb">/</span><span>Nova Mortgage</span><span class="crumb">/</span><strong>Inventarisatie</strong></div>
+        <div class="top-actions"><span class="environment">SHADOW DEMO</span><span class="today">Fictieve klantdata</span><div class="avatar mini">AD</div></div>
+      </header>
+      <div class="content">
+        <div class="welcome-line"><div class="eyebrow">NOVA MORTGAGE <span class="gold-stroke"></span> INVENTARISATIE</div><div class="header-controls"><button type="button" class="button subtle" id="reset-demo">↺ Reset demo</button><button type="button" class="button dark" id="summary-button">Bekijk bevindingen <span aria-hidden="true">↗</span></button></div></div>
+        <h1>Een volledig klantbeeld. <span>Scherp voorbereid.</span></h1>
+        <p class="intro">Van eerste dossiercontrole tot het goedgekeurde Advey-gespreksverslag. Nova bereidt voor, jij houdt de regie.</p>
+        <div class="demo-warning" role="status"><span>ⓘ</span><div><strong>Veilige demonstratie.</strong> Dit scherm werkt alleen met synthetische gegevens in het geheugen van de browser. Er worden geen documenten, API-verzoeken of wijzigingen naar eBlinqx verstuurd.</div></div>
+        <section class="customer-hero" aria-label="Klantdossier">
+          <div class="hero-main"><div class="eyebrow cream">ACTIEF HYPOTHEEKDOSSIER</div><h2 id="customer-name">Fictief klantdossier</h2><div class="hero-data"><span>Relatie <b>DEMO-REL-1001</b></span><span>Hypotheekdienst <b>DEMO-HYP-2001</b></span><span>Gesprek <b>12 december · 13:00</b></span></div></div>
+          <div class="hero-side"><div class="hero-stat-label">VOORBEREIDINGSSTATUS</div><div class="hero-progress"><div id="completion-percent">0%</div><div class="progress-track"><div id="progress-bar"></div></div></div><p id="hero-subtitle">Gegevens ter controle</p></div>
+        </section>
+        <section class="metrics" aria-label="Dossierstatistieken">
+          <div class="metric"><div class="metric-label">OPEN VOORSTELLEN</div><strong id="metric-proposals">0</strong><small>Wachten op beoordeling</small></div>
+          <div class="metric"><div class="metric-label">SIGNALERINGEN</div><strong id="metric-signals">0</strong><small>Te beoordelen bevindingen</small></div>
+          <div class="metric"><div class="metric-label">DOCUMENTEN</div><strong id="metric-documents">0</strong><small>Beschikbaar in het dossier</small></div>
+          <div class="metric"><div class="metric-label">VOLGENDE MIJLPAAL</div><strong class="metric-time">T − 45</strong><small>Definitieve voorbereiding</small></div>
+        </section>
+        <div class="workspace">
+          <section class="panel customer-panel" id="inventarisatie">
+            <div class="panel-head"><div><div class="eyebrow">01 · WERKDOSSIER</div><h2>Klantkaart</h2><p>Vergelijk gegevens met de bron, keur goed per veld of sectie.</p></div><span class="chip blue">Concept in Nova</span></div>
+            <div class="tabs" id="section-tabs" role="tablist" aria-label="Klantkaartsecties"></div>
+            <div class="section-caption" id="section-caption"></div>
+            <div class="field-table-wrap"><table class="field-table"><thead><tr><th scope="col">Gegeven</th><th scope="col">eBlinqx</th><th scope="col">Voorstel Nova</th><th scope="col">Bron</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actie</span></th></tr></thead><tbody id="fields-body"></tbody></table></div>
+            <div id="ui-message" class="ui-message" role="alert" hidden></div>
+            <div class="section-actions"><small>Een goedkeuring is lokaal in deze demo. Externe CRM-mutaties zijn geblokkeerd.</small><button type="button" class="button gold" id="approve-section">Keur voorgestelde velden goed <span>✓</span></button></div>
+          </section>
+          <div class="side-column">
+            <section class="panel attention-panel" id="signaleringen"><div class="panel-head compact"><div><div class="eyebrow">02 · KWALITEIT</div><h2>Signaleringen</h2></div><span class="count-label" id="signal-count">0 open</span></div><div class="signals" id="signals"></div></section>
+            <section class="panel document-panel" id="documenten"><div class="panel-head compact"><div><div class="eyebrow">03 · BRONNEN</div><h2>Documenten</h2></div></div><div id="documents"></div><div class="subnote">Bestanden zijn hier alleen metadata. Downloaden en OCR staan uit.</div></section>
+          </div>
+        </div>
+        <div class="bottom-row">
+          <section class="panel process-panel" id="proces"><div class="panel-head compact"><div><div class="eyebrow">04 · WORKFLOW</div><h2>Procesverloop</h2></div><span class="chip">eBlinqx is leidend</span></div><ol class="timeline" id="timeline"></ol></section>
+          <section class="panel next-panel" id="goedkeuringen"><div class="eyebrow">VOLGENDE ACTIE</div><h2>Adviseur blijft aan zet.</h2><p>Nova verzamelt en analyseert. Alle mutaties, klantcommunicatie en dossierafsluiting vereisen eerst de afgesproken menselijke toestemming.</p><button type="button" class="button outline-light" id="review-button">Bekijk openstaande punten <span>→</span></button><div class="next-footer">Geen externe actie actief <span>●</span></div></section>
+        </div>
+        <footer>Nova 2030 · Schee Scheuller Hypotheken <span>Conceptinterface · geen productieverbinding</span></footer>
+      </div>
+    </div>
+  </div>
+  <dialog id="findings-dialog"><div class="dialog-top"><div><div class="eyebrow">CONCEPT · INTERN</div><h2>Voorbereiding inventarisatie</h2></div><button type="button" id="close-dialog" class="close-dialog" aria-label="Sluiten">×</button></div><div id="findings-content"></div><div class="dialog-foot"><small>Nog geen definitieve PDF · geen opslag in eBlinqx</small><button type="button" class="button dark" id="close-dialog-bottom">Sluiten</button></div></dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
